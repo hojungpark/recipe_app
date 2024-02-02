@@ -1,0 +1,32 @@
+nav {
+  background-color: #007bff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #0056b3;
+}
+
+nav a:not(:last-child) {
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 10px;
+  }
+
+  nav a {
+    padding: 8px 10px;
+    margin-right: 5px;
+  }
+}
