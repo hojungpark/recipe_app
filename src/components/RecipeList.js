@@ -8,7 +8,7 @@ const RecipeList = () => {
 
   return (
     <div className="recipe-list-container">
-      <h2>Recipes</h2>
+      <h2>Saved Recipes</h2>
       {recipes.length > 0 ? (
         <ul className="recipe-list">
           {recipes.map((recipe, index) => (

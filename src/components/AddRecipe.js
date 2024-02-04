@@ -19,6 +19,14 @@ function AddRecipe({ onAddRecipe }) {
     navigate("/");
   };
 
+  const handleReset = () => {
+    setNewRecipe({
+      name: "",
+      ingredients: "",
+      instructions: "",
+    });
+  };
+
   return (
     <div className="add-recipe-page">
       <h2>Add New Recipe</h2>
@@ -33,7 +41,6 @@ function AddRecipe({ onAddRecipe }) {
           onChange={(e) => setNewRecipe({ ...newRecipe, name: e.target.value })}
           required
         />
-
         <label htmlFor="ingredients">Ingredients</label>
         <input
           id="ingredients"
@@ -46,7 +53,6 @@ function AddRecipe({ onAddRecipe }) {
           }
           required
         />
-
         <label htmlFor="instructions">Instructions</label>
         <textarea
           id="instructions"
@@ -58,9 +64,11 @@ function AddRecipe({ onAddRecipe }) {
           }
           required
         ></textarea>
-
+        <button type="button" className="reset-button" onClick={handleReset}>
+          Reset
+        </button>
         <button type="submit" className="submit-button">
-          Add Recipe
+          Save
         </button>
       </form>
     </div>
